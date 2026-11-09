@@ -254,3 +254,23 @@ footer {
 .project-card p {
     margin-top: 8px;
 }
+
+/* Add spacing to Project Summary */
+.saved-projects {
+    margin-top: 30px;
+    padding: 25px;
+}
+
+.saved-projects h2 {
+    margin-bottom: 20px;
+}
+
+.project-card {
+    margin-bottom: 20px;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}

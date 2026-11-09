@@ -60,15 +60,77 @@
             </div>
         </section>
 
-        <section id="expenses" class="page hidden">
-            <h2>Expense Records</h2>
-            <p>Expense monitoring will be displayed here.</p>
-        </section>
+        
+<section id="expenses" class="page hidden">
+    <h2>Expense Records</h2>
+    <p>Record and monitor infrastructure project expenses.</p>
 
-        <section id="reports" class="page hidden">
-            <h2>Budget Reports</h2>
-            <p>Project budget reports will be displayed here.</p>
-        </section>
+    <form id="expenseForm">
+
+        <label>Select Project</label>
+        <select id="expenseProject" required>
+            <option value="">Select a project</option>
+        </select>
+
+        <label>Expense Description</label>
+        <input type="text" id="expenseDescription"
+               placeholder="Enter expense description" required>
+
+        <label>Supplier</label>
+        <input type="text" id="expenseSupplier"
+               placeholder="Enter supplier name" required>
+
+        <label>Expense Amount</label>
+        <input type="number" id="expenseAmount"
+               min="0.01" step="0.01"
+               placeholder="Enter amount" required>
+
+        <label>Expense Date</label>
+        <input type="date" id="expenseDate" required>
+
+        <button type="submit">Save Expense</button>
+
+    </form>
+
+    <div class="saved-projects">
+        <h2>Saved Expenses</h2>
+
+        <div id="expensesList">
+            <p>No expenses recorded yet.</p>
+        </div>
+    </div>
+</section>
+
+
+        
+<section id="reports" class="page hidden">
+    <h2>Budget Reports</h2>
+    <p>Overview of allocated budgets and project expenses.</p>
+
+    <div class="panel">
+        <h3>Total Allocated Budget</h3>
+        <p id="totalBudget">₱0.00</p>
+    </div>
+
+    <div class="panel">
+        <h3>Total Expenses</h3>
+        <p id="totalExpenses">₱0.00</p>
+    </div>
+
+    <div class="panel">
+        <h3>Remaining Budget</h3>
+        <p id="remainingBudget">₱0.00</p>
+    </div>
+
+    <div class="saved-projects">
+        <h2>Project Budget Summary</h2>
+
+        <div id="reportList">
+            <p>No project reports available.</p>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <footer>
