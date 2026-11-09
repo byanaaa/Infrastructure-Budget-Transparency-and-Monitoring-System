@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure Budget System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Infrastructure Budget</h1>
+        <p>Transparency and Monitoring System</p>
+    </header>
+
+    <nav>
+        <button onclick="showPage('dashboard')">Dashboard</button>
+        <button onclick="showPage('projects')">Projects</button>
+        <button onclick="showPage('expenses')">Expenses</button>
+        <button onclick="showPage('reports')">Reports</button>
+    </nav>
+
+    <main>
+        <section id="dashboard" class="page">
+            <h2>Dashboard</h2>
+            <p>Welcome to the Infrastructure Budget Monitoring System.</p>
+            <div class="panel">
+                <h3>System Status</h3>
+                <p id="systemStatus">Loading...</p>
+            </div>
+        </section>
+
+        <section id="projects" class="page hidden">
+            <h2>Project Information</h2>
+
+            <form id="projectForm">
+                <label>Project Name</label>
+                <input type="text" id="projectName" required>
+
+                <label>Contractor Name</label>
+                <input type="text" id="contractorName" required>
+
+                <label>Engineer Name</label>
+                <input type="text" id="engineerName" required>
+
+                <label>Total Budget</label>
+                <input type="text" id="budget"
+                       inputmode="numeric"
+                       placeholder="Enter total budget"
+                       required>
+
+                <button type="submit">Save Project</button>
+            </form>
+
+            <div class="saved-projects">
+                <h2>Saved Projects</h2>
+                <div id="projectsList">
+                    <p>No projects saved yet.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="expenses" class="page hidden">
+            <h2>Expense Records</h2>
+            <p>Expense monitoring will be displayed here.</p>
+        </section>
+
+        <section id="reports" class="page hidden">
+            <h2>Budget Reports</h2>
+            <p>Project budget reports will be displayed here.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Infrastructure Budget Transparency and Monitoring System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
